@@ -1,3 +1,6 @@
+#ifndef STRINGP
+#define STRINGP
+
 #include <iostream>
 #include <string>
 
@@ -15,3 +18,4 @@ public:
     void reverse();
 
 };
+#endif
