@@ -1,4 +1,5 @@
 #include "stringp.hpp"
+#include <string>
 
 //Lowercase Conversion Method
 void stringp::lower() {
@@ -26,5 +27,15 @@ void stringp::upper() {
 
 //Reversal Conversion Method
 void stringp::reverse() {
-    
+    char reversed[this->length()];
+    int ln1 = (this->length()) - 1;
+    for(char& c : *this) {
+        reversed[ln1] = c;
+        ln1--;
+    }
+    int ln2 = 0;
+    for(char& c : *this) {
+        c = reversed[ln2];
+        ln2++;
+    }
 }
