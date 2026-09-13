@@ -14,8 +14,11 @@ public:
     static constexpr char alpha_Lower[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     //Custom Methods
     void lower();
+    std::string r_lower();
     void upper();
+    std::string r_upper();
     void reverse();
+    std::string r_reverse();
 
 };
 #endif
