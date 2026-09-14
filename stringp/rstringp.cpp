@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include "stringp.hpp"
 
 std::string stringp::r_lower() {
@@ -40,4 +41,23 @@ std::string stringp::r_reverse() {
         reversed = reversed + reversal[i];
     }
     return reversed;
+}
+
+std::vector<std::string> stringp::split() {
+    std::vector<std::string> tokens;
+    std::string token = "";
+    for(char& c : *this) {
+        if(c = ' ') {
+            if(!token.empty()) {
+                tokens.push_back(token);
+                token.clear();
+            }
+        } else {
+            token = token + c;
+        }
+    }
+    if(!token.empty()) {
+        tokens.push_back(token);
+    }
+    return tokens;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 //Inheritance From Standard "string" Class
 class stringp : public std::string {
@@ -19,6 +20,7 @@ public:
     std::string r_upper();
     void reverse();
     std::string r_reverse();
+    std::vector<std::string> split();
 
 };
 #endif
