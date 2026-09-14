@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 #include "stringp.hpp"
-
+//
 std::string stringp::r_lower() {
     std::string temp = *this;
     for(int i = 0; i < this->length(); i++) {
@@ -47,7 +47,7 @@ std::vector<std::string> stringp::split() {
     std::vector<std::string> tokens;
     std::string token = "";
     for(char& c : *this) {
-        if(c = ' ') {
+        if(c == ' ') {
             if(!token.empty()) {
                 tokens.push_back(token);
                 token.clear();
