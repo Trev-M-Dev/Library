@@ -1,7 +1,8 @@
+/*ACCESSOR METHODS FOR "stringp" CLASS*/
 #include <string>
 #include <vector>
 #include "stringp.hpp"
-//
+//Accessor Lowercase Conversion Method (ASCII Replacement Under Development)
 std::string stringp::r_lower() {
     std::string temp = *this;
     for(int i = 0; i < this->length(); i++) {
@@ -14,7 +15,7 @@ std::string stringp::r_lower() {
     }
     return temp;
 }
-
+//Accessor Uppercase Conversion Method (ASCII Replacement Under Development)
 std::string stringp::r_upper() {
     std::string temp = *this;
     for(int i = 0; i < this->length(); i++) {
@@ -27,7 +28,7 @@ std::string stringp::r_upper() {
     }
     return temp;
 }
-
+//Accessor Reverse Conversion Method
 std::string stringp::r_reverse() {
     std::string reversed = "";
     char reversal[this->length()];
@@ -42,7 +43,7 @@ std::string stringp::r_reverse() {
     }
     return reversed;
 }
-
+//Accessor Split Method
 std::vector<std::string> stringp::split() {
     std::vector<std::string> tokens;
     std::string token = "";
@@ -56,6 +57,7 @@ std::vector<std::string> stringp::split() {
             token = token + c;
         }
     }
+    //Last Token Handling
     if(!token.empty()) {
         tokens.push_back(token);
     }

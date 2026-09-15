@@ -1,7 +1,8 @@
+/*MUTATOR METHODS FOR "stringp" CLASS*/
 #include "stringp.hpp"
 #include <string>
 
-//Lowercase Conversion Method
+//Mutator Lowercase Conversion Method (ASCII Replacement Under Development)
 void stringp::lower() {
     for(char& c : *this) {
         for(int i = 0; i < 26; i++) {
@@ -13,7 +14,7 @@ void stringp::lower() {
     }
 }
 
-//Uppercase Conversion Method
+// Mutator Uppercase Conversion Method (ASCII Replacement Under Development)
 void stringp::upper() {
     for(char& c : *this) {
         for(int i = 0; i < 26; i++) {
@@ -25,7 +26,7 @@ void stringp::upper() {
     }
 }
 
-//Reversal Conversion Method
+//Mutator Reversal Conversion Method
 void stringp::reverse() {
     char reversed[this->length()];
     int ln1 = (this->length()) - 1;
