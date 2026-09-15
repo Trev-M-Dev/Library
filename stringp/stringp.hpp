@@ -21,6 +21,7 @@ public:
     void reverse();
     std::string r_reverse();
     std::vector<std::string> split();
+    void replace(std::string srcString, std::string subString);
 
 };
 #endif
