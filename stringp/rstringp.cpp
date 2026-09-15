@@ -30,7 +30,7 @@ std::string stringp::r_upper() {
 }
 //Accessor Reverse Conversion Method
 std::string stringp::r_reverse() {
-    std::string reversed = "";
+    std::string reversed;
     char reversal[this->length()];
     int ln1 = (this->length()) - 1;
     for(char& c : *this) {
@@ -39,14 +39,14 @@ std::string stringp::r_reverse() {
     }
 
     for(int i = 0; i < this->length(); i++) {
-        reversed = reversed + reversal[i];
+        reversed += reversal[i];
     }
     return reversed;
 }
 //Accessor Split Method
 std::vector<std::string> stringp::split() {
     std::vector<std::string> tokens;
-    std::string token = "";
+    std::string token;
     for(char& c : *this) {
         if(c == ' ') {
             if(!token.empty()) {
@@ -54,7 +54,7 @@ std::vector<std::string> stringp::split() {
                 token.clear();
             }
         } else {
-            token = token + c;
+            token += c;
         }
     }
     //Last Token Handling
